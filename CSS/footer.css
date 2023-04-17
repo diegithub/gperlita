@@ -1,0 +1,43 @@
+.datos-footer{
+    background-color: var(--azul1);
+    color: var(--blanco2);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 150px;
+    padding-top: 10px;
+    z-index: 200;
+}
+
+.telefonos {
+    list-style: none;
+}
+
+.direccion, .telefonos {
+    text-align: center;
+} 
+
+.cont-redes {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.redes {
+    width: 48px;
+    height: 48px;
+    margin: 10px;
+}
+
+.redes:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+  

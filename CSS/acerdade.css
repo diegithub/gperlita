@@ -1,0 +1,120 @@
+.acerca-de-perlita {
+    background-color: --blanco1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .div-reseña-video {
+    width: 100%;
+    background-color: var(--blanco1);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .p-acerca-de {
+    position: relative;
+    padding: 10px 20px;
+    
+  }
+  
+  .articulos-p {
+    background-color: var(--blanco1);
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+    padding-top: 50px;
+  }
+  
+  
+  .articulos-p h3 {
+    position: relative;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  
+
+  .mision-vision {
+    width: 100%;
+    background-color: var(--blanco1);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .mision-vision-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .mision {
+    position: relative;
+    padding: 20px;
+  }
+
+  .mision p {
+    text-align: justify;
+    padding-top: 20px;
+  }
+
+  .vision {
+    position: relative;
+    padding: 20px;
+  }
+
+  .vision p {
+    text-align: justify;
+    padding-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .div-reseña-video {
+      width: 100%;
+      background-color: var(--blanco1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    
+    .acerca-de-perlita {
+      margin: 5px 0px 0px 0px;
+      padding: 10px;
+    }
+
+    .articulos-p {
+      padding-top: 5px;
+    }
+
+    .div-reseña-video video {
+      width: 100%;
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
+
+    .mision-vision {
+      flex-direction: column;
+    }
+  
+  }
+
+  
+
+
+  
+
+  

@@ -1,0 +1,10 @@
+html {
+    
+    background: linear-gradient(var(--blanco1), var(--blanco2));
+}
+
+section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+

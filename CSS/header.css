@@ -1,0 +1,293 @@
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 90px 20px 0;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+
+.header__superior {
+  max-width: 100%;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--blanco1);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header_nav {
+  position: relative;
+  width: 100%;
+  background-color: var(--azul1);
+  z-index: 20;
+}
+
+.headernav-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 100;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.logo-perlita img {
+  width: 250px;
+}
+
+.search input {
+  width: 250px;
+  padding: 10px;
+  background-color: var(--blanco1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 992px;
+  margin: 0 auto; /*centra el contenido*/
+}
+
+.nav-link {
+  color: var(--blanco1);
+  text-decoration: none;
+}
+
+.l-logo {
+  height: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px 15px;
+  line-height: 80px;
+  background-color: #e7f0f4;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.nav-menu-h {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item-h {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content; /*hace que no se corten las palabras*/
+}
+
+.submenu {
+  position: relative;
+}
+
+.nav-menu-v {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--azul2);
+  position: absolute;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+  top: 90px;
+  left: -5px;
+  padding: 8px 0px;
+  visibility: hidden;
+  opacity: 0.8;
+  z-index: 10;
+  transition: all 300ms ease;
+  list-style: none;
+}
+
+.nav-menu-item-v {
+  font-size: 14px;
+  margin: 0 10px;
+  /* Adjust line-height to reduce height of each list item */
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.nav-menu-item-h:hover .nav-menu-v {
+  visibility: visible;
+  opacity: 1;
+  top: 80px;
+}
+
+.nav-menu-v:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid var(--azul2);
+  position: absolute;
+  top: -12px;
+  left: 20px;
+}
+
+.nav-menu-link-v {
+  display: block;
+  padding: 6px;
+  padding-left: 14px;
+  margin-top: 10px;
+  font-size: 14px;
+  transition: all 300ms ease;
+}
+
+.nav-menu-link-v:hover {
+  background: var(--azul4);
+  transform: scale(1.1);
+  padding-left: 30px;
+  font-size: 14px;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+}
+
+.nav-menu-link-h {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-link-h:hover {
+  background-color: var(--azul2);
+  transition: 0.5s;
+}
+
+.nav-toggle {
+  max-height: 80px;
+  color: var(--blanco1);
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .header {
+    height: 120px;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+  }
+
+  .header__superior {
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+  }
+
+  .logo-perlita img {
+    width: 200px;
+  }
+
+  .search input {
+    display: none;
+  }
+
+  .l-logo {
+    height: 60px;
+    font-size: 20px;
+    padding: 5px 10px;
+    line-height: 60px;
+    background-color: #e7f0f4;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+  }
+
+  .logo-imagen {
+    width: 40px;
+  }
+
+  .nav-menu-h {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    background-color: var(--azul2);
+    position: fixed;
+    left: 0;
+    top: 120px;
+    width: 100%;
+    padding: 20px 0;
+    height: calc(
+      100% - 60px
+    ); /*para generar scrol cuando la pantalla es muy pequeña*/
+    overflow-y: auto; /*para generar scrol cuando la pantalla es muy pequeña*/
+    left: 100%;
+    transition: left 0.3s;
+    z-index: 120;
+  }
+
+
+  .nav-menu-item-h {
+    line-height: 60px;
+  }
+
+  .nav-menu-link-h:hover {
+    background: none;
+
+    transition: 0.5s;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+  }
+
+  .nav-toggle {
+    max-height: 60px;
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-menu-h-visible {
+    left: 0;
+  }
+
+ /* .menu.active {
+    transform: translateX(0);
+  }*/
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu-v {
+    height: auto;
+    padding: 8px 0;
+    visibility: none;
+    top: 75%;
+    left: 0;
+    transition: all 0ms ease;
+  }
+
+  .nav-menu-item-h:hover .nav-menu-v {
+    visibility: visible;
+    opacity: 1;
+    top: 80px;
+    position: static;
+  }
+
+  .nav-menu-item-h:active .nav-menu-v {
+    visibility: none;
+  }
+
+  .nav-menu-link-v {
+    transition: all 0ms ease;
+    text-align: center;
+  }
+}

@@ -1,0 +1,31 @@
+body {
+    font-family: "montserrat", sans-serif;
+    color: var(--gris3);
+    text-align: center;
+    font-size: 14px;
+    padding: 0;
+}
+header,
+section.even {
+    color: var(--blanco1);
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h2,h3,h4 {
+    letter-spacing: 0.3rem;
+}
+
+h1,h3 {
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    letter-spacing: 0.1rem;   
+}
