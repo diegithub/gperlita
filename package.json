@@ -1,0 +1,22 @@
+{
+  "name": "granitosperlita",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegithub/gperlita.git"
+  },
+  "author": "Diego Velasco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegithub/gperlita/issues"
+  },
+  "homepage": "https://github.com/diegithub/gperlita#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
